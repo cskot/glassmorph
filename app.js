@@ -89,10 +89,26 @@ timeline
     ease: "back.out(0.7)",
     x: "200"
     })
-/*
-gsap.from(".logo", { duration:10, x: "-100%", ScrollTrigger:".logo" });
-gsap.from(".ball", { duration:10, x:"100vw", ScrollTrigger:{
-    trigger:".card4",
-    scrub:true,
-}})
-*/
+    .to(".message-scroll", {
+        scrollTrigger: {
+            trigger: ".sticky",
+            endTrigger: ".message",
+            scrub: 3.5,
+            start: "top top",
+            end: "bottom top"
+        },
+        ease: "back.out(0.7)",
+        x: "200"
+    })
+    .to(".message-mobile", {
+        scrollTrigger: {
+            trigger: ".sticky",
+            endTrigger: ".message",
+            scrub: 4.5,
+            start: "top top",
+            end: "center 30%"
+        },
+        ease: "back.out(0.7)",
+        x: "-180",
+        y: "-120"
+    })
